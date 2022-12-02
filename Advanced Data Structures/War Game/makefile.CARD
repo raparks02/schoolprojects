@@ -1,0 +1,20 @@
+War.exe: driver.o card.o standardDeck.o deck.o nonStandardDeck.o
+	g++ driver.o card.o standardDeck.o deck.o nonStandardDeck.o -o War.exe
+
+driver.o:
+	g++ -c driver.cpp -o driver.o
+	
+card.o:
+	g++ -c card.cpp -o card.o
+
+standardDeck.o:
+	g++ -c standardDeck.cpp -o standardDeck.o
+
+deck.o:
+	g++ -c deck.cpp -o deck.o
+
+nonStandardDeck.o:
+	g++ -c nonStandardDeck.cpp -o nonStandardDeck.o
+	
+clean:
+	rm *.o War.exe

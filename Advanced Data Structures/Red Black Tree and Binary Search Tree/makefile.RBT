@@ -1,0 +1,17 @@
+A5.exe: driver.o BinarySearchTree.o TreeNode.o RedBlackTree.o
+	g++ driver.o BinarySearchTree.o TreeNode.o RedBlackTree.o -o A5.exe
+
+driver.o:
+	g++ -c driver.cpp -o driver.o
+
+BinarySearchTree.o:
+	g++ -c BinarySearchTree.cpp -o BinarySearchTree.o
+
+TreeNode.o:
+	g++ -c TreeNode.cpp -o TreeNode.o
+	
+RedBlackTree.o:
+	g++ -c RedBlackTree.cpp -o RedBlackTree.o
+
+clean:
+	rm *.o A5.exe

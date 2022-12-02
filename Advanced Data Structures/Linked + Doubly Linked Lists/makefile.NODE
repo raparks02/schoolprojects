@@ -1,0 +1,20 @@
+A4.exe: driver.o Node.o LinkedNode.o LinkedList.o DoublyLinkedList.o
+	g++ driver.o Node.o LinkedNode.o LinkedList.o DoublyLinkedList.o -o A4.exe
+
+driver.o:
+	g++ -c driver.cpp -o driver.o
+
+Node.o:
+	g++ -c Node.cpp -o Node.o
+
+LinkedNode.o:
+	g++ -c LinkedNode.cpp -o LinkedNode.o
+	
+LinkedList.o:
+	g++ -c LinkedList.cpp -o LinkedList.o
+
+DoublyLinkedList.o:
+	g++ -c DoublyLinkedList.cpp -o DoublyLinkedList.o
+	
+clean:
+	rm *.o A4.exe

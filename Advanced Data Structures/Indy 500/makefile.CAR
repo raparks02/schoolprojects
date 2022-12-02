@@ -1,0 +1,11 @@
+Race.exe: driver.o Car.o
+	g++ driver.o Car.o -o Race.exe
+
+driver.o:
+	g++ -c driver.cpp -o driver.o
+	
+Car.o:
+	g++ -c Car.cpp -o Car.o
+	
+clean:
+	rm *.o Race.exe

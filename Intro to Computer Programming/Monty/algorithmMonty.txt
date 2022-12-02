@@ -1,0 +1,34 @@
+Problem:
+	Creating a text-based game that prompts the user with various questions that must be responded to correctly to continue through the multiple branches.
+	
+Input: 
+	Player's name and answers to the following: two mathematical questions, question asking for the user's favorite color, and question asking the airspeed velocity of an unladen swallow.
+	
+Output: 
+	Welcome response to the player after entering his or her name along with a correct or incorrect response to the player depending on the input to each question. Correct answers move forward while incorrect ones result in a "Cast into the Gorge of Eternal Peril!"
+	
+Step-by-Step:
+	1. Welcome the player to the texted-based game.
+	2. Allow the player to input his or her name.
+		a. Refer to the player by this name with the prefix "Sir" for the remainder of the game.
+	3. Ask the player for the answer to the mathematical query 2 + 3.
+	4. Allow the player to enter a response.
+	5. Analyze response entered.
+		a. If entered response is correct (5), the player moves to next question after a confirmation message.
+		b. If entered response is incorrect, the player loses, and the game ends here with a taunt.
+	6. Ask the player for the answer to the mathematical expression 2 + 5 * 3 / (9 + 3)
+	7. Allow the player to enter a response.
+	8. Analyze response entered.
+		a. If entered response is correct (3.25), the player moves to the next question after a confirmation message.
+		b. If entered response is incorrect, the player loses and the game ends here with a taunt.
+	9. Ask the player for favorite color.
+	10. Allow the player to enter a response.
+	11. Analyze response entered.
+		a. If entered response is correct (Blue or blue), the player moves to the next question after a confirmation message.
+		b. If entered response is incorrect, the player loses and the game ends here with a taunt.
+	12. Ask the player for the airspeed velocity of an unladen swallow.
+	13. Allow the player to enter a response.
+	14. Analyze response entered.
+		a. If entered response is correct(odd number), the player wins after "I, I don't know that!" message.
+		b. If response is incorrect, the player loses and the game ends here with a taunt.
+	15. Congratulate and thank the player for playing.

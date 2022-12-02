@@ -1,0 +1,52 @@
+Problem: 
+	Creating a guessing game program through looping with two modes(and an invalid selection option): Human vs. CPU, where the player guesses the CPU's random number from 1 to 100, and CPU vs. Human, where the CPU guesses the player's random number from 1 to 100 in 7 or less attempts.
+	
+Input: 
+	- Selection number for each mode
+	- Guesses for the computer's random numbers in Human vs. CPU mode
+	- Character inputs for if the computer's guess is too low, too high, or correct in CPU vs. Human mode
+	- Character inputs for if the player would like to play again or not
+	
+Output:
+	- Responses allowing guesses to be entered along with a too high, too low, or correct output to the player's inputted guess in Human vs. CPU mode
+	- Random number guesses in response to the player's input in CPU vs. Human mode
+	- Return to selection screen after yes input for play again
+	- Goodbye message after no input for play again
+	- Responses if selection or input was invalid
+	
+Step-by-Step
+	1. Welcome the player to the game.
+	
+	2. Allow the player to select from 2 modes (Human vs. CPU and CPU vs. Human) through number input which is the beginning of the loop.
+	
+	3. Analyze number entered.
+		A. If player enters 1, progress to Human vs. CPU mode loop.
+			a) Allow the player to enter a guess for the CPU's random number between 1 and 100.
+			b) Display if guess is too low, too high, or correct.
+			c) Allow the player to continue guessing with a too high, too low, or correct response while the guess is not correct through the loop.
+			d) Inform the player when correct and the amount of tries it took.
+			
+		B. If player enters 2, progress to CPU vs. Human mode loop.
+			a) Allow the player to pick a number between 1 and 100.
+			b) Guess the average or (maximum number + minimum number) / 2. This is initially (100 + 1) / 2.
+			c) Allow the player to input if guess is too high(H or h), too low(L or l), or correct(C or c).
+			d) Adjust new guess if incorrect.
+				i) If too high, subtract one from the most recent guess and make the value the maximum value instead before taking the average again.
+				ii) If too low, add one to the most recent guess and make the value the minimum value instead before taking average again.
+				iii) If an invalid selection is made, allow the player to enter too high, too low, or correct again.
+			e) Repeat the guesses while incorrect until CPU guesses correctly through the loop which will always be 7 or less tries.
+			f) Inform the player the amount of tries it took.
+			 
+		C. If player enters any other number, inform of invalid selection.
+			a) Bring player back to mode selection to input a different selection.
+			
+	4. After completing either mode display a play again question.
+	
+	5. Allow the player to input yes(Y or y) or no(N or n).
+		A. While the player selection is yes, return them to the mode selection as this continues the loop.
+		
+		B. If the player selects no, output a goodbye message and terminate as this ends the loop.
+		
+		C. If the player enters an invalid character, display invalid and return to play again question.
+	
+	

@@ -1,0 +1,45 @@
+Problem:
+	Creating a program that determines whether an inputted number is prime and prints out the list of prime numbers between 0 and the inputted number through the use of looping, functions, and parameter passing semantics.
+	
+Input:
+	  - Integer input that is determined if prime.
+	  - Character input for if the player would like to see the prime numbers between 0 and the inputted number.
+	  -Character input for if the player would like to continue to try a different number.
+	  
+Output:
+	- Response telling the player if no primes were found(Example: entered 0 or 1).
+	- Response telling the player if entered number is a prime number.
+	- Asking the player if they would like to see prime numbers between 0 and inputted number.
+	- Displaying prime numbers between 0 and inputted number.
+	- Response asking the player if he or she would like to continue.
+	- Response telling the player to input a number as long as he or she chooses continue.
+	- Goodbye message if the player does not choose to continue.
+	
+Step-by-Step:
+	1. Welcome the player to the prime calculator.
+	
+	2. Allow the player to input a number.
+	
+	3. Determine if the entered number is prime through a function(isPrime) that determines if a given number has factors using a for loop.
+		a) Display that the number is prime to the player if it is.
+		b) Move on if the number has factors and is not prime.
+		
+	4. Determine how many total prime numbers there are from 0 to the entered number using a function(howManyPrime).
+		a)If there are no prime numbers from 0 to entered number(number entered is 0 or 1), display that no prime numbers were found.
+		b)If the entered number is 2, display that it is the smallest prime number.
+		c)For any other number, display the total amount of prime numbers from 0 to the entered number.
+	
+	5. If the entered number does have prime numbers from 0 to 100, ask the player if they would like to see the numbers.
+		 a) If the player enters the character for yes, use a function(printPrimeNumbers) that loops through each number from 0 to the entered number to test for prime using another function(isPrime).
+		 	i) Display these numbers that are prime.
+		b) If the player enters the character for no, move on.
+	
+	6. Allow the player to enter a character input for if he or she would like to continue.
+		a) If the player inputs the character for yes, continue the loop by allowing a new number to be entered.
+		b) If the player inputs the character for no, thank the player for running the program and terminate.
+		
+	
+
+	
+	
+	

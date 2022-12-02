@@ -1,0 +1,39 @@
+Problem:
+	Creating a grade calculator that reads in the contents of a text file, calculates the letter grade and score based upon weighted averages, and writes them out to a text file.
+	
+Input:
+	- Text file the computer is going to read in from that includes sections such as Assignments, Participation, Midterms, and Finals along with scores in those sections
+	- Name of the text file that the computer will create to output letter grade and score
+	
+Output:
+	- Message telling the person that the entered file is being read and calculated
+	- Goodbye message
+	- Message if input file can not be opened
+	- File created by computer that will output letter grade and score
+	
+Step-by-Step:
+	1. Welcome the player to the grade calculator
+	2. Allow the player to input the name of a file that includes categories such as Assignments, Participation, Midterms, and Finals with scores.
+	3. Attempt to open the file
+		A) If the file can be opened, inform the player of reading the file and calculating grades
+			i) Get the lines of the file while not at the end of it through the use of looping and get line functions that stream strings of words
+			ii) Use looping to take the value of each score from a weight(category) and find the average of them (add up all scores and divide by the number of scores) 
+			iii) Multiply that score by its weight(Participation is 10%, Assignments are 50%, Midterm is 20%, and Final is 20%)
+			iv) Continue the loop repeating for the other weights (categories) as the get line function continues until the end of the file is reached
+			v) Close the input file stream
+			vi) Add up the weighted averages of each category for the final score
+			vi) Use a function(calculateLetterGrade) to find letter grade based on final score
+				a) If score is greater than or equal to 90, the grade is an A
+				b) If score is less than 90 and greater than or equal to 80, the grade is a B
+				c) If score is less than 80 and greater than or equal to 70, the grade is a C
+				d) If score is less than 70 and greater than or equal to 60, the grade is a D
+				e) Any other score is an F
+			vii) Allow the player to input the name of a text file
+			viii) Inform the player of writing score and letter grade to file
+			viii) Create the text file and output the score and letter grade
+			ix) Close output file stream
+			
+		B) If the file can not be opened, inform the player that the file is unable to be opened
+	4. Thank the player for using the program
+
+	

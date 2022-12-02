@@ -1,0 +1,29 @@
+Problem: 
+	Calculating the area of the following shapes: rectangles, squares, rhombus' and triangles.
+
+Input: 
+	Necessary values to calculate area of each shape (length and width for rectangle, side length for square, each diagonal length for rhombus, and base and height for triangle).
+
+Output: 
+	The area of the rectangle, square, rhombus, and triangle in that order.
+
+Step-by-Step:
+	1. Allow a length and width value of rectangle to be entered
+		a. Examine entered length and width values of rectangle
+		b. Multiply the length and width values together
+		c. Display product as area of rectangle
+	2. Allow a side length of square to be entered
+		a. Examine entered side length
+		b. Square the entered value
+		c. Display product as area of square
+	3. Allow 2 diagonal values of a rhombus to be entered
+		a. Examine entered diagonal values
+		b. Multiply the entered diagonal values together
+		c. Divide the product calculated by 2
+		d. Display calculated value as area of rhombus
+	4. Allow a base and height value of triangle to be entered
+		a. Examine entered base and height values of triangle
+		b. Multiply the base and height values together
+		c. Divide the product calculated by 2
+		d. Display calculated value as area of triangle
+	5. Terminate

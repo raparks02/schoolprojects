@@ -1,0 +1,28 @@
+Problem:
+	Creating a program that prompts the user to enter a word less than 100 characters in length and reverses it using a single recursive function.
+	
+Input:
+	- An array of characters as an input word
+	- A Y or N character for if wanting to continue
+
+Output:
+	- Welcome and goodbye message
+	- The array of characters entered reversed back to the user
+	- Question asking the player if he or she would like to continue
+	- Invalid input response if the player puts in something other than Y or N
+	
+Step-by-Step:
+	1.Welcome the player to the word reversal program.
+	2.In a loop while the player chooses continue, have the player enter a word that is 100 characters or less.
+	3.Use a single recursive function (reversedWord) with parameters of the word and string length of word (size) to reverse the array of characters of the entered word.
+		 a) If the word entered is the base case(size is less than or equal to length of word minus size), do nothing as the word is already reversed.
+		 b) If the word is any length greater than base case, use recursion to begin switching the letters outside in.
+			i)Set a temporary variable equal to the value of the length of the inputted word minus size.
+			ii)Set the value of the length of the inputted word subtracting the size equal to the value of the inputted word's size minus one.
+			iii)Set the value of the inputted word at a size minus one equal to the temporary character.
+		 	iv)Continue reversing the letters until the base case is reached by continuing to call back the reversedWord function with a size minus one.
+	4.Display the reversed word to the player.
+	5.Ask the player if he or she would like to continue through the character inputs of Y or N in a while loop.
+		a)If player enters Y(yes), continue the main loop by allowing a new word to be entered that will be reversed.
+		b)If player enters N(no), thank the player for playing and terminate.
+		c)If player enters and invalid input, inform them and allow Y or N to be entered again repeating the continue while loop.

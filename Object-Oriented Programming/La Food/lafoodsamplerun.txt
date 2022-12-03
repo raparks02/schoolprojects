@@ -1,0 +1,22 @@
+*** Welcome to the La Food Restaurant Simulator ***
+
+Enter data file name: fooddata.txt
+
+Please wait at the bar, 
+  party Merlin of 3 people.  (time=3)
+Please wait at the bar, 
+  party Arthur Pendragon of 2 people.  (time=8)
+Table for Merlin! (time=10)
+Please wait at the bar, 
+  party Sir Lancelot of 2 people.  (time=12)
+Table for Arthur Pendragon! (time=15)
+Please wait at the bar, 
+  party The Green Knight of 3 people.  (time=17)
+Table for Sir Lancelot! (time=20)
+** Simulation Terminated **
+
+The average wating time was: 7.333333492279053
+The following parties were never seated: 
+  party The Green Knight of 3 people. 
+
+Have a nice meal!

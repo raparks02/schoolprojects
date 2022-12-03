@@ -1,0 +1,44 @@
+***Welcome to the GUESSING GAME!!***
+
+I have a number between 1 and 100. Can you guess it?
+
+Enter a guess: 50
+Too Low, You'll eventually get it!
+
+Enter a guess: 75
+Too Low, You'll eventually get it!
+
+Enter a guess: 90
+Too High, You'll eventually get it!
+
+Enter a guess: 80
+Too High, You suck!
+
+Enter a guess: 77
+Too Low, Give up!
+
+Enter a guess: 78
+You Win!!
+
+Would you like to play again? (Y)es or (N)o? Y
+ 
+I have a number between 1 and 100. Can you guess it?
+
+Enter a guess: 50
+Too High, You suck!
+
+Enter a guess: 25
+Too High, That's not right!
+
+Enter a guess: 10
+Too Low, You'll eventually get it!
+
+Enter a guess: 15
+Too Low, That's not right!
+
+Enter a guess: 20
+You Win!!
+
+Would you like to play again? (Y)es or (N)o? N
+ 
+Thank you for playing!

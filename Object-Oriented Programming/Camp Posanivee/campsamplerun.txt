@@ -1,0 +1,50 @@
+Welcome to Camp Posanivee!!
+
+Command: A
+There are no campers enrolled.
+
+Command E: Kanga 26 V
+New camper added.
+
+Command E: Tigger 28 A
+New camper added.
+
+Command E: Pooh 31 A
+New camper added.
+
+Command: L
+Alphabetical List of Campers
+Kanga
+Pooh
+Tigger
+
+Command D Tigger
+	Name: Tigger
+	Age: 28
+	Diet: A
+
+Command E: Rabbit 30 V
+New camper added.
+
+Command: A
+Average Age = 28.75.
+
+Command: V
+Number of Vegan campers: 2
+
+Command E: Eeyore 36 V
+New camper added.
+
+Command W: Kanga
+Camper withdrawn.
+
+Command: P
+Preorder Traversal: 
+Pooh
+Eeyore
+Tigger
+Rabbit
+
+Command: Q
+End of program.
+Bring plenty of calomine!

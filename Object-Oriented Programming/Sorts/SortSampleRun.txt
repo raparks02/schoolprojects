@@ -1,0 +1,11 @@
+How many integers would you like to sort? 10000
+***Bubble Sort***
+Sort Time: 985
+***Insertion Sort***
+Sort Time: 175
+***Selection Sort***
+Sort Time: 92
+***Quick Sort***
+Sort Time: 6
+***Shell Sort***
+Sort Time: 5

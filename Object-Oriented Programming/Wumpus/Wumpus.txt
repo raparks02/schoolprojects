@@ -1,0 +1,21 @@
+10 2 2
+1 2 6 10
+A wooden sign reads "Turn Back Now!"
+2 1 3 7
+There is a pool of water in the corner to drink from.
+3 2 4 8
+You see the footprints from previous travelers.
+4 3 5 9
+There is just barely enough light to see ahead.
+5 4 6 10
+You trip over a random tree stump. How did that get there?
+6 1 5 7
+The odor of the room is attracting all types of bugs.
+7 2 6 8
+You find a military bag, but it is empty.
+8 3 7 9
+You can narrowly fit through the tight crawlspace to progress.
+9 4 8 10
+An escape hatch is blocked off by a large boulder.
+10 1 5 9
+You get a strong sense of deja vu.

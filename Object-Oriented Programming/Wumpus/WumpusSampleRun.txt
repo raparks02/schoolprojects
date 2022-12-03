@@ -1,0 +1,79 @@
+**Welcome to the Zombie Apocalypse!**
+Destroy the hive to stop the outbreak!
+
+You are in room 1.
+You have 3 explosive shots left.
+A wooden sign reads "Turn Back Now!"
+There are tunnels to rooms 2, 6, 10.
+You can hear the faint groan of zombies nearby.
+You can hear crackles of lava coming from ahead.
+There is an ammo crate ahead. Maybe more explosives?
+(M)ove or (S)hoot?
+S
+Which room?
+2
+You missed the mark and shot through a pool of lava. Keep exploring.
+
+You are in room 1.
+You have 2 explosive shots left.
+A wooden sign reads "Turn Back Now!"
+There are tunnels to rooms 2, 6, 10.
+You can hear the faint groan of zombies nearby.
+You can hear crackles of lava coming from ahead.
+There is an ammo crate ahead. Maybe more explosives?
+(M)ove or (S)hoot?
+S
+Which room?
+6
+You missed the mark and shot a zombie. Keep exploring!
+
+You are in room 1.
+You have 1 explosive shots left.
+A wooden sign reads "Turn Back Now!"
+There are tunnels to rooms 2, 6, 10.
+You can hear the faint groan of zombies nearby.
+You can hear crackles of lava coming from ahead.
+There is an ammo crate ahead. Maybe more explosives?
+(M)ove or (S)hoot?
+M
+Which Room?
+10
+You found an ammo crate!
+You replenish your explosive shots. They are set back to 3.
+
+You are in room 10.
+You have 3 explosive shots left.
+You get a strong sense of deja vu.
+There are tunnels to rooms 1, 5, 9.
+You can hear the faint groan of zombies nearby.
+(M)ove or (S)hoot?
+S
+Which room?
+5
+You missed the mark and shot a zombie. Keep exploring!
+
+You are in room 10.
+You have 2 explosive shots left.
+You get a strong sense of deja vu.
+There are tunnels to rooms 1, 5, 9.
+You can hear the faint groan of zombies nearby.
+(M)ove or (S)hoot?
+M
+Which Room?
+9
+
+You are in room 9.
+You have 2 explosive shots left.
+An escape hatch is blocked off by a large boulder.
+There are tunnels to rooms 4, 8, 10.
+There is an ammo crate ahead. Maybe more explosives?
+A screeching noise indicates the hive is nearby.
+Loud sparks up ahead. Maybe a teleporter?
+(M)ove or (S)hoot?
+S
+Which room?
+8
+You destroyed the hive with an explosive round! **YOU WIN**
+
+Thank you for playing!
+

@@ -1,0 +1,16 @@
+***Welcome to the Exam Statistics Progam!!***
+
+Please enter the name of your data file: esp.txt
+
+Minimum Score: 72
+Maximum Score: 92
+Average Score: 82.5
+Median Score: 83.0
+
+Number of Scores by Letter Grade: 
+	A: 1
+	B: 3
+	C: 2
+	D: 0
+	F: 0
+There are 6 scores

@@ -99,7 +99,8 @@ void HashTableCuckoo::insert(int key, int value) //method to insert an entry
             {
                 tempKey = entry_2[tempHashIndex].getKey();
                 tempValue = entry_2[tempHashIndex].getValue();
-                HashEntry temp(tempKey,tempValue);
+                HashEntry temp3(tempKey,tempValue);
+                temp = temp3;
                 entry_2[tempHashIndex] = temp2;
                 entry_2[tempHashIndex].setStatus(OCCUPIED);
                 tempHashIndex = tempKey % size_;
@@ -125,7 +126,7 @@ void HashTableCuckoo::insert(int key, int value) //method to insert an entry
         std::cout << "Cycle Present - Rehash!" << std::endl;
         std::cout << "Key Unpositioned: " << key << std::endl;
         cycle_ = true;
-  }
+    }
 
 }
 int HashTableCuckoo::search(int key)

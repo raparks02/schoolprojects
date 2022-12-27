@@ -1,0 +1,24 @@
+Coelophysis	carnivore	50	pounds	brown	220	5	walk
+Tyrannosaurus Rex	carnivore	9	tons	green	68	10	walk
+Archaeopteryx	omnivore	2	pounds	blue	150	1	fly
+Therizinosaurus	herbivore	5	tons	yellow	70	5	walk
+Spinosaurus	piscivore	8	tons	gray	95	8	walk
+Allosaurus	carnivore	2	tons	brown	150	9	walk
+Velociraptor	carnivore	40	pounds	tan	73	5	walk
+Deinonychus	carnivore	180	pounds	gray	110	7	walk
+Diplodocus	herbivore	120	tons	tan	153	6	walk
+Brachiosaurus	herbivore	60	tons	tan	152	6	walk
+Apatosaurus	herbivore	30	tons	green	151	6	walk
+Ankylosaurus	herbivore	8	tons	green	67	5	walk
+Stegosaurus	herbivore	5	tons	brown	150	5	walk
+Iguanodon	herbivore	3	tons	green	125	5	walk
+Maiasaurus	herbivore	3	tons	green	76	5	walk
+Corythosaurus	herbivore	4	tons	red	76	5	walk
+Pachycephalosaurus	herbivore	900	pounds	orange	67	4	walk
+Triceratops	herbivore	7	tons	brown	67	5	walk
+Styracosaurus	herbivore	3	tons	red	75	5	walk
+Mosasaurus	carnivore	15	tons	gray	70	7	swim
+Elasmosaurus	piscivore	12	tons	silver	80	6	swim
+Plesiosaurus	piscivore	200	pounds	gray	195	4	swim
+Pteranodon	piscivore	100	pounds	blue	85	2	fly
+Quetzalcoatlus	omnivore	750	pounds	orange	67	4	fly

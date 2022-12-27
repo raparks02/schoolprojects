@@ -1,0 +1,8 @@
+Dan	30
+Penny	20
+Sheldon	37
+Pam	6
+Ron	5
+Ginny	12
+Scott	1
+Matt	1

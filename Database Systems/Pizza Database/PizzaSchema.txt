@@ -1,0 +1,48 @@
+create table employees(
+	id int not null,
+	firstname varchar(30) not null,
+	lastname varchar(30) not null,
+	phone char(12) not null,
+	primary key(id) );
+
+create table customers(
+	customer_id int not null,
+	firstname varchar(30) not null,
+	lastname varchar(30) not null,
+	payment_id int(5),
+	phone char(12) not null,
+	unique(payment_id),
+	primary key(customer_id) );
+
+create table pizza(
+	pizza_type enum('cheese','pepperoni','sausage','meatlovers','hawaiian','supreme','margherita','bbqchicken','buffalo','mushroom'),
+	pizza_price double,
+	cook_time int,
+	cook_time_unit varchar(3) not null,
+	primary key(pizza_type) );
+
+create table payments(
+	order_id int,
+	payment_id int,
+	total_price double,
+	payment_type char(1),
+	primary key(payment_id),
+	foreign key(payment_id) references customers(payment_id) );
+	
+create table orders(
+	order_id int,
+	customer_id int,
+	total_price double,
+	employee_id int,
+	pizza_type enum('cheese','pepperoni','sausage','meatlovers','hawaiian','supreme','margherita','bbqchicken','buffalo','mushroom'),
+	primary key(order_id),
+	foreign key(customer_id) references customers(customer_id),
+	foreign key(employee_id) references employees(id), 
+	foreign key(pizza_type) references pizza(pizza_type) );
+	
+	
+load data local infile 'employees.txt' into table employees;
+load data local infile 'customers.txt' into table customers;
+load data local infile 'pizza.txt' into table pizza;
+load data local infile 'payments.txt' into table payments;
+load data local infile 'orders.txt' into table orders;

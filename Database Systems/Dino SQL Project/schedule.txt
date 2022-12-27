@@ -1,0 +1,16 @@
+Dan	tue	morning
+Dan	thu	morning
+Penny	mon	afternoon
+Sheldon	mon	afternoon
+Pam	wed	morning
+Ron	fri	morning
+Ginny	fri	morning
+Scott	thu	afternoon
+Matt	thu	afternoon
+Penny	wed	afternoon
+Sheldon	wed	afternoon
+Pam	fri	morning
+Ron	fri	afternoon
+Ginny	fri	afternoon
+Scott	tue	afternoon
+Matt	tue	afternoon

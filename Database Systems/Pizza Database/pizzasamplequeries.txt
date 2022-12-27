@@ -1,0 +1,163 @@
+1.List all the names of customers who ordered sausage pizza.
+	select firstname,lastname from customers natural join orders where customers.customer_id = orders.customer_id and orders.pizza_type = 'sausage';
+	+-----------+----------+
+	| firstname | lastname |
+	+-----------+----------+
+	| Lewis     | Woodward |
+	| Rishi     | Cooley   |
+	| Rafael    | Jimenez  |
+	| Madeline  | Morrow   |
+	| Noah      | Duke     |
+	| Anahi     | Long     |
+	| Ally      | Skinner  |
+	| Casey     | Lane     |
+	| Esteban   | Novak    |
+	| Ruben     | Lamb     |
+	| Haylee    | Price    |
+	| Callie    | Suarez   |
+	| Alexis    | Sparks   |
+	| Maci      | Jennings |
+	| Skye      | Delacruz |
+	| Mariana   | Bartlett |
+	| Ezekiel   | Bray     |
+	| Luciana   | Moreno   |
+	| Cannon    | Cochran  |
+	| Brock     | Dillon   |
+	+-----------+----------+
+
+2.List the total amount of debit transactions.
+	 select count(payment_type) as debit_payments from payments where payment_type = 'd';
+	 +----------------+
+	 | debit_payments |
+	 +----------------+
+	 |             30 |
+	 +----------------+
+	 
+3.How many of each pizza were ordered?
+	select pizza_type, count(*) as NumberOfOrders from orders group by pizza_type;
+	+------------+----------------+
+	| pizza_type | NumberOfOrders |
+	+------------+----------------+
+	| cheese     |             20 |
+	| pepperoni  |             19 |
+	| sausage    |             20 |
+	| meatlovers |             25 |
+	| hawaiian   |             24 |
+	| supreme    |             23 |
+	| margherita |             24 |
+	| bbqchicken |             23 |
+	| buffalo    |             22 |
+	+------------+----------------+
+	
+
+4.List the first name of customers who share the same first name with someone else.
+	select firstname from customers group by firstname having count(firstname)>1;
+	+-----------+
+	| firstname |
+	+-----------+
+	| Carley    |
+	| Dominique |
+	| Gillian   |
+	| Jaidyn    |
+	| Lilly     |
+	| Nora      |
+	| Yasmine   |
+	+-----------+
+
+5. Give the maximum number of one type of pizza ordered.
+	select max(mycount) from (select pizza_type,count(pizza_type) mycount from orders group by pizza_type) as T;
+	+--------------+
+	| max(mycount) |
+	+--------------+
+	|           25 |
+	+--------------+
+
+
+6.Which employee took the most orders from customers?
+	select e.firstname,e.lastname from employees e where e.id = (select max(employee_id) from orders);
+	+-----------+----------+
+	| firstname | lastname |
+	+-----------+----------+
+	| Micah     | Westcott |
+	+-----------+----------+
+
+
+7.Which customer spent the most amount of money on orders(there will be two with equal amounts)?
+	select c.firstname,c.lastname from customers c inner join orders o on o.customer_id = c.customer_id where o.total_price = (select max(o.total_price) from
+ orders o);  
+	 +-----------+----------+
+	 | firstname | lastname |
+	 +-----------+----------+
+	 | Alexis    | Sparks   |
+	 | Cason     | Lane     |
+	 +-----------+----------+
+
+
+8.How many customers tipped more than $4 on their order?
+	select count(*) from orders join pizza on orders.pizza_type = pizza.pizza_type where total_price - pizza_price > 4;
+	+----------+
+	| count(*) |
+	+----------+
+	|       33 |
+	+----------+
+
+
+9.List the names and phone numbers for all customers who ordered bbqchicken pizza.
+	select firstname,lastname,phone from customers natural join orders where pizza_type = 'bbqchicken';
+	+-----------+-----------+--------------+
+	| firstname | lastname  | phone        |
+	+-----------+-----------+--------------+
+	| Lacey     | Trevino   | 268-238-9047 |
+	| Kira      | Bridges   | 241-813-5579 |
+	| Eden      | Sutton    | 757-744-9871 |
+	| Shyann    | Boone     | 350-007-5650 |
+	| Samara    | Santos    | 599-872-6018 |
+	| Alonzo    | Newton    | 210-381-2816 |
+	| Jaidyn    | Marquez   | 953-644-4257 |
+	| Carson    | Dickson   | 826-900-6808 |
+	| Phillip   | Case      | 371-002-2855 |
+	| Finn      | Aguirre   | 340-916-8888 |
+	| Jordan    | Holden    | 158-175-3093 |
+	| Ralph     | Benson    | 639-842-8564 |
+	| Max       | Mcmahon   | 496-032-9277 |
+	| Julia     | Zamora    | 810-564-1265 |
+	| Armani    | Logan     | 878-729-4236 |
+	| Gia       | Hardin    | 973-001-7743 |
+	| Kamora    | Reeves    | 152-932-1424 |
+	| Melissa   | Waters    | 933-504-1494 |
+	| Audrina   | Daugherty | 884-595-1728 |
+	| Jessica   | Medina    | 222-195-2162 |
+	| Mathew    | Vazquez   | 982-584-4702 |
+	| Bronson   | Lozano    | 280-349-0088 |
+	| Kamden    | Holt      | 739-264-4616 |
+	+-----------+-----------+--------------+
+
+10.Organize all employees by last name.
+	select firstname,lastname from employees order by lastname;
+	+-----------+------------+
+	| firstname | lastname   |
+	+-----------+------------+
+	| Katrina   | Bennett    |
+	| Cole      | Bische     |
+	| Ella      | Causer     |
+	| Janet     | Daniell    |
+	| Elwood    | Ellsworth  |
+	| Ankur     | Gupta      |
+	| Tami      | Harrison   |
+	| Jillie    | Hobson     |
+	| Micheal   | Jeffries   |
+	| Carissa   | Lynwood    |
+	| Julia     | Mann       |
+	| Miles     | Mann       |
+	| Johnny    | Payne      |
+	| Lucian    | Payton     |
+	| Bret      | Ridley     |
+	| Ann       | Rowntree   |
+	| Ryan      | Rybarczyk  |
+	| Anthony   | Signorelli |
+	| Brande    | Silver     |
+	| Cory      | Simons     |
+	| Jon       | Sorenson   |
+	| Micah     | Westcott   |
+	+-----------+------------+
+

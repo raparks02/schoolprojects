@@ -1,0 +1,270 @@
+1. [2] List the possible dinosaur colors.
+select distinct color from species;
++--------+
+| color  |
++--------+
+| brown  |
+| green  |
+| blue   |
+| tan    |
+| red    |
+| gray   |
+| silver |
+| orange |
+| yellow |
++--------+
+
+
+2. [2] Who are the Green Giants? List all the names of dinosaurs that are in the WG cage that are also the color green.
+ select name from dino natural join species where color='green' and cageID='WG';
++------------+
+| name       |
++------------+
+| Bernadette |
+| Howard     |
+| Raj        |
+| Stuart     |
++------------+
+
+3. [2] My Favorite Color: List the cages that contain blue dinosaurs.
+select distinct cageID from dino natural join species where color='blue'; 
++--------+
+| cageID |
++--------+
+| AV     |
+| PZ     |
++--------+
+
+4. [2] List the names of the carnivores.
+select name from dino natural join species where diet='carnivore';
++-----------+
+| name      |
++-----------+
+| Charles   |
+| Mulcahy   |
+| Hawkeye   |
+| Bart      |
+| Homer     |
+| Elizabeth |
+| Henry     |
+| Margaret  |
+| Sherman   |
+| BJ        |
+| Trapper   |
++-----------+
+
+5. [3] Vet rounds: List the name, species, cage, severity, and description of dinosaurs on the injured list.
+select name,sname,cageID,severity,description from dino join injured_list on dino.name=injured_list.dname;
++-----------+-------------------+--------+----------+------------------------------------------+
+| name      | sname             | cageID | severity | description                              |
++-----------+-------------------+--------+----------+------------------------------------------+
+| Elizabeth | Tyrannosaurus Rex | WT     |        2 | bunion on right foot - keep an eye on it |
+| Ellie     | Elasmosaurus      | AQ     |        1 | small cut on right front flipper         |
+| Sheldon   | Diplodocus        | WG     |        1 | nothing - he is a hypochondriac          |
+| Harry     | Triceratops       | PZ     |        5 | injury on his forehead                   |
+| Ellie     | Elasmosaurus      | AQ     |        6 | broken tailbone                          |
++-----------+-------------------+--------+----------+------------------------------------------+
+
+6. [3] Baby watch: List the name, species, and cage of adult female dinosaurs that share a cage with an adult male of the same species.
+select distinct d1.name,d1.sname,d1.cageID from dino d1,dino d2 where d1.gender='female' an
+d d2.gender='male' and d1.age='adult' and d2.age='adult' and d1.cageID=d2.cageID and d1.sname=d2.sname;
++------------+--------------------+--------+
+| name       | sname              | cageID |
++------------+--------------------+--------+
+| Amy        | Diplodocus         | WG     |
+| Bernadette | Apatosaurus        | WG     |
+| Kirstin    | Pteranodon         | AV     |
+| Margaret   | Tyrannosaurus Rex  | WT     |
+| Meredith   | Ankylosaurus       | WP     |
+| Pam        | Triceratops        | WP     |
+| Penny      | Brachiosaurus      | WG     |
+| Phyllis    | Pachycephalosaurus | WP     |
+| Priya      | Brachiosaurus      | WG     |
++------------+--------------------+--------+
+
+7. [3] List the names of all baby dinosaurs that are not at the petting zoo.
+select name from dino where age='baby' and cageID!='PZ';
++--------+
+| name   |
++--------+
+| Maggie |
++--------+
+
+8. [4] List the names of herbivores that are in the same cage as one or more carnivores.
+select distinct d1.name from dino d1,dino d2, species s1, species s2 where d1.sname=s1.sname and d2.sname=s2.sname and s1.diet='herbivore' and
+s2.diet='carnivore' and d1.cageID = d2.cageID;
++---------+
+| name    |
++---------+
+| Klinger |
+| Radar   |
++---------+
+
+
+9.[3] List the names of flying dinosaurs that are in cages without a roof.
+select d1.name from dino d1,cage c1, species s1 where c1.ID=d1.cageID and s1.locomotion='fly' and d1.sname = s1.sname and c1.hasroof='no';
++------+
+| name |
++------+
+| Luna |
++------+
+
+10. [2] List the names of all the dinosaurs, grouped by the cage they are in.
+select name from dino order by cageID;
++------------+
+| name       |
++------------+
+| Bart       |
+| Ellie      |
+| Homer      |
+| Lisa       |
+| Maggie     |
+| Marge      |
+| Avi        |
+| Kirstin    |
+| KO         |
+| Lindsey    |
+| Matt       |
+| Mitch      |
+| Scott      |
+| Dobby      |
+| Draco      |
+| Ginny      |
+| Harry      |
+| Hedwig     |
+| Hermione   |
+| Luna       |
+| Neville    |
+| Ron        |
+| Amy        |
+| Bernadette |
+| Dan        |
+| Howard     |
+| Kripke     |
+| Leonard    |
+| Penny      |
+| Priya      |
+| Raj        |
+| Sheldon    |
+| Stuart     |
+| Angela     |
+| Cera       |
+| Dwight     |
+| Jan        |
+| Jim        |
+| Kevin      |
+| Meredith   |
+| Michael    |
+| Oscar      |
+| Pam        |
+| Phyllis    |
+| Roy        |
+| Ryan       |
+| Stanley    |
+| Stephanie  |
+| BJ         |
+| Charles    |
+| Elizabeth  |
+| Frank      |
+| Hawkeye    |
+| Henry      |
+| Klinger    |
+| Margaret   |
+| Mulcahy    |
+| Radar      |
+| Sherman    |
+| Trapper    |
++------------+
+
+
+11. [5] List all species that have at least one dinosaur in every cage that contains a Triceratops.
+ select distinct A.sname from species A where not exists (select * from species B natural join dino C where B.sname="Triceratops" and not exists (select * from species D natural join dino E where E.cageID=C.cageID and D.sname=A.sname));
++--------------------+
+| sname              |
++--------------------+
+| Ankylosaurus       |
+| Iguanodon          |
+| Maiasaurus         |
+| Pachycephalosaurus |
+| Stegosaurus        |
+| Triceratops        |
++--------------------+
+
+
+12. [2] Which species is the heaviest?
+select sname from species where wt = (select MAX(wt) from species where wt_unit='tons');
++------------+
+| sname      |
++------------+
+| Diplodocus |
++------------+
+
+13. [5] Compute and list the amount of extra room for more dinosaurs there is for each cage. Include the cage ID in your output.
+select c1.ID,c1.capacity - count(d1.cageID) as numleft from cage c1 join dino d1 on c1.ID=d1.cageID group by c1.ID;
++----+---------+
+| ID | numleft |
++----+---------+
+| AQ |      94 |
+| AV |      93 |
+| PZ |      41 |
+| WG |     239 |
+| WP |     985 |
+| WT |      88 |
++----+---------+
+
+14. [3] Which cage has the highest average danger level?
+select cageID from (select max(a) as m from (select cageID,avg(danger_level) as a from dino natural join species group by cageID) as T) as S, (select cageID,avg(danger_level) as a from dino natural join species group by cageID) as U
+where S.m=U.a;
++--------+
+| cageID |
++--------+
+| WT     |
++--------+
+
+15. [4] How many people can get a dinosaur ride in a given week?
+select sum(numpeople) from schedule natural join capacity where schedule.dname=capacity.dname;
++----------------+
+| sum(numpeople) |
++----------------+
+|            224 |
++----------------+
+
+16. [2] Penny punched Sheldon in the nose. Update the injured list by adding another entry for Sheldon with a broken nose, severity 6.
+insert into injured_list (dname,severity,description) values ('Sheldon', 6, 'broken nose');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from injured_list;
++-----------+----------+------------------------------------------+
+| dname     | severity | description                              |
++-----------+----------+------------------------------------------+
+| Elizabeth |        2 | bunion on right foot - keep an eye on it |
+| Ellie     |        1 | small cut on right front flipper         |
+| Sheldon   |        1 | nothing - he is a hypochondriac          |
+| Harry     |        5 | injury on his forehead                   |
+| Ellie     |        6 | broken tailbone                          |
+| Sheldon   |        6 | broken nose                              |
++-----------+----------+------------------------------------------+
+17. [3] Write a query to remove all dinosaurs from the schedule if they have an injury of severity 4 or larger.
+ delete from schedule where dname in (select dname from injured_list where severity >= 4);
+Query OK, 2 rows affected (0.00 sec)
+
+mysql> select * from schedule;
++-------+------+-----------+
+| dname | day  | time      |
++-------+------+-----------+
+| Dan   | tue  | morning   |
+| Dan   | thu  | morning   |
+| Penny | mon  | afternoon |
+| Pam   | wed  | morning   |
+| Ron   | fri  | morning   |
+| Ginny | fri  | morning   |
+| Scott | thu  | afternoon |
+| Matt  | thu  | afternoon |
+| Penny | wed  | afternoon |
+| Pam   | fri  | morning   |
+| Ron   | fri  | afternoon |
+| Ginny | fri  | afternoon |
+| Scott | tue  | afternoon |
+| Matt  | tue  | afternoon |
++-------+------+-----------+
+

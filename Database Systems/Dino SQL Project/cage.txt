@@ -1,0 +1,6 @@
+WP	1000	The Wilds - the Thundering Plains	no
+WG	250	The Wilds - the Land of Giants	no
+WT	100	The Wilds - Therapod Run	no
+PZ	50	Petting Zoo	no
+AV	100	The Aviary	yes
+AQ	100	The Aquarium	yes

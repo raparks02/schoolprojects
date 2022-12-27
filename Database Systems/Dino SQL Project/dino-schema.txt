@@ -1,0 +1,63 @@
+# Cretacious Park dinosaur database
+
+# Table of dino cages
+create table cage(
+  ID varchar(5),
+  capacity int,
+  description varchar(50),
+  hasroof enum('yes','no'),
+  primary key(ID) );
+
+# Table of dino species
+create table species(
+  sname varchar(20),
+  diet enum('carnivore','herbivore','omnivore','piscivore'),
+  wt int,
+  wt_unit enum('pounds','tons'),
+  color varchar(20),
+  when_alive int,  -- when this species lived in millions of years ago
+  danger_level int,  -- 1-10, with 10 most dangerous to humans
+  locomotion enum('walk','fly','swim'),
+  primary key(sname) );
+
+# Table of specific dinosaurs in the park
+create table dino(
+  name varchar(20),
+  sname varchar(20), -- species name
+  gender enum('female','male','unknown'),
+  cageID varchar(5),
+  age enum('baby','adolescent','adult'),
+  primary key(name),
+  foreign key(sname) references species(sname),
+  foreign key(cageID) references cage(ID) );
+
+# Table of the schedule for dino rides - which dino give rides when
+create table schedule(
+  dname varchar(20),
+  day enum('mon','tue','wed','thu','fri','sat','sun'),
+  time enum('morning','afternoon'),
+  foreign key(dname) references dino(name) );
+
+# Table to keep track of how many people a dino can carry
+create table capacity(
+  dname varchar(20),
+  numpeople int,
+  primary key(dname),
+  foreign key(dname) references dino(name) );
+
+# Table of dinos injured or in the hospital
+create table injured_list(
+  dname varchar(20),
+  severity int,  -- scale of 1-10 with 1=observation 10=critical
+  description varchar(100),
+  foreign key(dname) references dino(name) );
+
+# code to load the tables with data
+# use   "mysql --local-infile=ON"  to give permission
+
+load data local infile 'cage.txt' into table cage;
+load data local infile 'species.txt' into table species;
+load data local infile 'dino.txt' into table dino;
+load data local infile 'schedule.txt' into table schedule;
+load data local infile 'capacity.txt' into table capacity;
+load data local infile 'injured_list.txt' into table injured_list;
